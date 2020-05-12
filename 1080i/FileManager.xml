@@ -96,7 +96,7 @@
                     <height>66</height>
                     <width>480</width>
                     <align>left</align>
-                    <label>-</label>
+                    <label></label>
                 </control>
             </control>
 
@@ -177,7 +177,7 @@
                     <height>66</height>
                     <width>480</width>
                     <align>left</align>
-                    <label>-</label>
+                    <label></label>
                 </control>
             </control>
         </control>

@@ -41,7 +41,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.YesterdayText)]" />
                     <param name="onleft" value="8215" />
                     <param name="onright" value="8201" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.200.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.200.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -51,7 +51,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.201.Weekday)]" />
                     <param name="onleft" value="8200" />
                     <param name="onright" value="8202" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.201.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.201.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -61,7 +61,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.202.Weekday)]" />
                     <param name="onleft" value="8201" />
                     <param name="onright" value="8203" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.202.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.202.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -71,7 +71,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.203.Weekday)]" />
                     <param name="onleft" value="8202" />
                     <param name="onright" value="8204" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.203.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.203.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -81,7 +81,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.204.Weekday)]" />
                     <param name="onleft" value="8203" />
                     <param name="onright" value="8205" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.204.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.204.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -91,7 +91,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.205.Weekday)]" />
                     <param name="onleft" value="8204" />
                     <param name="onright" value="8206" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.205.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.205.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -101,7 +101,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.206.Weekday)]" />
                     <param name="onleft" value="8205" />
                     <param name="onright" value="8207" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.206.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.206.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -111,7 +111,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.207.Weekday)]" />
                     <param name="onleft" value="8206" />
                     <param name="onright" value="8208" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.207.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.207.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -121,7 +121,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.208.Weekday)]" />
                     <param name="onleft" value="8207" />
                     <param name="onright" value="8209" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.208.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.208.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -131,7 +131,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.209.Weekday)]" />
                     <param name="onleft" value="8208" />
                     <param name="onright" value="8210" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.209.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.209.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -141,7 +141,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.210.Weekday)]" />
                     <param name="onleft" value="8209" />
                     <param name="onright" value="8211" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.210.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.210.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -151,7 +151,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.211.Weekday)]" />
                     <param name="onleft" value="8210" />
                     <param name="onright" value="8212" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.211.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.211.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -161,7 +161,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.212.Weekday)]" />
                     <param name="onleft" value="8211" />
                     <param name="onright" value="8213" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.212.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.212.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -171,7 +171,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.213.Weekday)]" />
                     <param name="onleft" value="8212" />
                     <param name="onright" value="8214" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.213.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.213.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -181,7 +181,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.214.Weekday)]" />
                     <param name="onleft" value="8213" />
                     <param name="onright" value="8215" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.214.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.214.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -191,7 +191,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.215.Weekday)]" />
                     <param name="onleft" value="8214" />
                     <param name="onright" value="8200" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.215.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.215.Wday),)" />
                 </include>
             </control>
         </control>

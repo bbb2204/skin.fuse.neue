@@ -522,7 +522,7 @@
         <control type="button" id="5">
             <description>EPG</description>
             <label>$LOCALIZE[19030] / $LOCALIZE[19031]</label>
-            <onclick>ActivateWindow(pvrosdguide)</onclick>
+            <onclick>ActivateWindow(pvrchannelguide)</onclick>
             <include>OSD_TextButton</include>
         </control>
 

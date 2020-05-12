@@ -21,7 +21,14 @@
                     <usealttexture>Container.SortDirection(Descending)</usealttexture>
                     <include>Defs_Context_Button</include>
                 </control>
-                <control type="button" id="28">
+                <control type="button" id="10">
+					<description>Watched Toggle</description>
+					<include>Defs_Context_Button</include>
+					<label>$LOCALIZE[20367]</label>
+					<label2>[B]$INFO[Container.NonFolderItems][/B]</label2>
+					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+				</control>
+				<control type="button" id="28">
                     <description>Groups</description>
                     <include>Defs_Context_Button</include>
                 </control>

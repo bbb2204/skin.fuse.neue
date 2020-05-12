@@ -42,7 +42,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.200.Weekday)]" />
                     <param name="onleft" value="8215" />
                     <param name="onright" value="8201" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.200.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.200.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -52,7 +52,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.201.Weekday)]" />
                     <param name="onleft" value="8200" />
                     <param name="onright" value="8202" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.201.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.201.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -62,7 +62,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.202.Weekday)]" />
                     <param name="onleft" value="8201" />
                     <param name="onright" value="8203" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.202.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.202.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -72,7 +72,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.203.Weekday)]" />
                     <param name="onleft" value="8202" />
                     <param name="onright" value="8204" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.203.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.203.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -82,7 +82,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.204.Weekday)]" />
                     <param name="onleft" value="8203" />
                     <param name="onright" value="8205" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.204.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.204.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -92,7 +92,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.205.Weekday)]" />
                     <param name="onleft" value="8204" />
                     <param name="onright" value="8206" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.205.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.205.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
@@ -102,7 +102,7 @@
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.206.Weekday)]" />
                     <param name="onleft" value="8205" />
                     <param name="onright" value="8200" />
-                    <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.206.Wday),)" />
+                    <param name="visible" value="!String.IsEqual(Window(Home).Property(NextAired.206.Wday),)" />
                 </include>
             </control>
         </control>

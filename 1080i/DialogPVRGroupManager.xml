@@ -61,6 +61,17 @@
                     <align>left</align>
                     <include>Dialog_Standard_OkCancel</include>
                 </control>
+				<control type="togglebutton" id="34">
+					<description>TV/Radio toggle</description>
+					<height>74</height>
+                    <align>left</align>
+					<include>Dialog_Standard_OkCancel</include>
+					<alttexturenofocus colordiffuse="dialog_fg_12" border="8">common/box.png</alttexturenofocus>
+                    <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</alttexturefocus>
+					<label>$LOCALIZE[19174]</label>
+					<altlabel>$LOCALIZE[19173]</altlabel>
+					<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
+				</control>
             </control>
 
             <control type="group">
