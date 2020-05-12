@@ -1176,7 +1176,7 @@
                     <textcolor>main_fg_70</textcolor>
                     <font>font_listlabel</font>
                     <shadowcolor>4f000000</shadowcolor>
-                    <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,]</label>
+                    <label>$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName,,]</label>
                     <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
                 <control type="label">

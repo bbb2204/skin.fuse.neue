@@ -169,7 +169,7 @@
                     <width>auto</width>
                     <font>font_infobar_sublabel</font>
                     <textcolor>panel_fg_100</textcolor>
-                    <label>[COLOR=panel_fg_70]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,  •  ][/COLOR]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,  [COLOR=panel_fg_70]•[/COLOR]  ][COLOR=$VAR[ColorHighlight]]$INFO[ListItem.Genre][/COLOR]</label>
+                    <label>[COLOR=panel_fg_70]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName,,  •  ][/COLOR]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,  [COLOR=panel_fg_70]•[/COLOR]  ][COLOR=$VAR[ColorHighlight]]$INFO[ListItem.Genre][/COLOR]</label>
                     <aligny>center</aligny>
                     <visible>Player.HasVideo + Skin.HasSetting(global.showvideo)</visible>
                 </control>
@@ -179,7 +179,7 @@
                 <right>0</right>
                 <font>font_infobar_sublabel</font>
                 <textcolor>panel_fg_100</textcolor>
-                <label>[COLOR=panel_fg_70]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,  •  ][/COLOR]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,  [COLOR=panel_fg_70]•[/COLOR]  ][COLOR=$VAR[ColorHighlight]]$INFO[ListItem.Genre][/COLOR]</label>
+                <label>[COLOR=panel_fg_70]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName,,  •  ][/COLOR]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,  [COLOR=panel_fg_70]•[/COLOR]  ][COLOR=$VAR[ColorHighlight]]$INFO[ListItem.Genre][/COLOR]</label>
                 <aligny>center</aligny>
                 <bottom>0</bottom>
                 <top>33%</top>

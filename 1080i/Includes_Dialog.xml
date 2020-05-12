@@ -715,7 +715,7 @@
                         <textcolor>main_fg_70</textcolor>
                         <font>Tiny</font>
                         <aligny>top</aligny>
-                        <label fallback="19055">$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumber, (,)]</label>
+                        <label fallback="19055">$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
                     </control>
                 </control>
                 <!-- Plot -->

@@ -384,13 +384,13 @@
             <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/record.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/record.png</texturenofocus>
-            <usealttexture>Player.Recording</usealttexture>
+            <usealttexture>Player.IsRecordingPlayingChannel</usealttexture>
             <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/record-on.png</alttexturefocus>
             <alttexturenofocus colordiffuse="main_fg_70">osd/record-on.png</alttexturenofocus>
             <onclick>PlayerControl(Record)</onclick>
-            <enable>Player.CanRecord</enable>
+            <enable>Player.CanRecordPlayingChannel</enable>
             <visible>VideoPlayer.Content(LiveTV)</visible>
-            <animation effect="fade" start="100" end="33" time="100" condition="!Player.CanRecord">Conditional</animation>
+            <animation effect="fade" start="100" end="33" time="100" condition="!Player.CanRecordPlayingChannel">Conditional</animation>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused">Play</onfocus>
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
         </control>
@@ -547,13 +547,13 @@
             <onclick>ActivateWindow(osdvideosettings)</onclick>
             <include>OSD_TextButton</include>
         </control>
-        <!-- <control type="button" id="3">
+        <control type="button" id="3">
             <description>Subs</description>
             <label>$LOCALIZE[287]</label>
-            <onclick>Action(ShowSubtitles)</onclick>
+            <onclick>ActivateWindow(osdsubtitlesettings)</onclick>
             <include>OSD_TextButton</include>
-        </control> -->
-        <control type="button" id="3">
+        </control>
+        <control type="button" id="4">
             <description>CodecInfo</description>
             <label>$LOCALIZE[31085]</label>
             <onclick>Action(CodecInfo)</onclick>
