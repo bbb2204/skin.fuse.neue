@@ -16,9 +16,49 @@
     <variable name="Label_Duration">
         <value condition="!Skin.HasSetting(UseHoursMinutes) + !String.IsEmpty(Container(301).ListItem.Duration)">$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31020]]</value>
         <value condition="!Skin.HasSetting(UseHoursMinutes) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31020]]</value>
-        <value condition="Skin.HasSetting(UseHoursMinutes)">$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),, $LOCALIZE[31036] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),, $LOCALIZE[31020] ]</value>
+		<value condition="Skin.HasSetting(UseHoursMinutes) + !Window.IsActive(Home)">$VAR[Label_DurationHrMins]</value>
+		<value condition="Skin.HasSetting(UseHoursMinutes) + Window.IsActive(Home)">$VAR[Label_HomeDurationHrMins]</value>
+<!--        <value condition="Skin.HasSetting(UseHoursMinutes)">$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),, $LOCALIZE[31036] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),, $LOCALIZE[31020] ]</value> -->
     </variable>
 
+    <variable name="Label_DurationHrMins">
+		<value condition="Integer.IsEqual(ListItem.Duration(mins),60) | Integer.IsEqual(ListItem.Duration(mins),120) | Integer.IsEqual(ListItem.Duration(mins),180) | Integer.IsEqual(ListItem.Duration(mins),240) | Integer.IsEqual(ListItem.Duration(mins),300) | Integer.IsEqual(ListItem.Duration(mins),360) | Integer.IsEqual(ListItem.Duration(mins),420) | Integer.IsEqual(ListItem.Duration(mins),480) | Integer.IsEqual(ListItem.Duration(mins),540) | Integer.IsEqual(ListItem.Duration(mins),600)">$INFO[ListItem.Duration(hours)] $VAR[Label_Hour]</value>
+		<value condition="Integer.IsLess(ListItem.Duration(mins),60) + !String.IsEqual(ListItem.Duration(m),0)">$INFO[ListItem.Duration(m)] $VAR[Label_Minute]</value>
+		<value condition="!String.isEqual(ListItem.Duration(h),0) + String.IsEqual(ListItem.Duration(m),0) + !String.IsEqual(ListItem.Duration(ss),0)">$INFO[ListItem.Duration(h)] $VAR[Label_Hour], $INFO[ListItem.Duration(ss)] $LOCALIZE[31296]</value>
+		<value condition="Integer.IsLess(ListItem.Duration(mins),1) | String.IsEqual(ListItem.Duration(m),0)">$INFO[ListItem.Duration(ss),, $LOCALIZE[31296]]</value>
+        <value condition="!String.IsEqual(ListItem.Duration(h),0) + String.IsEqual(ListItem.Duration(m),0)">$INFO[ListItem.Duration(h)] $VAR[Label_Hour]</value>
+		<value>$INFO[ListItem.Duration(h)] $VAR[Label_Hour], $INFO[ListItem.Duration(m)] $VAR[Label_Minute]</value>
+	</variable>
+	
+	<variable name="Label_HomeDurationHrMins">
+		<value condition="Integer.IsEqual(Container(301).ListItem.Duration(mins),60) | Integer.IsEqual(Container(301).ListItem.Duration(mins),120) | Integer.IsEqual(Container(301).ListItem.Duration(mins),180) | Integer.IsEqual(Container(301).ListItem.Duration(mins),240) | Integer.IsEqual(ListItem.Duration(mins),300) | Integer.IsEqual(Container(301).ListItem.Duration(mins),360) | Integer.IsEqual(Container(301).ListItem.Duration(mins),420) | Integer.IsEqual(ListItem.Duration(mins),480) | Integer.IsEqual(Container(301).ListItem.Duration(mins),540) | Integer.IsEqual(Container(301).ListItem.Duration(mins),600)">$INFO[Container(301).ListItem.Duration(hours)] $VAR[Label_HomeHour]</value>
+		<value condition="Integer.IsLess(Container(301).ListItem.Duration(mins),60) + !String.IsEqual(Container(301).ListItem.Duration(m),0)">$INFO[Container(301).ListItem.Duration(m)] $VAR[Label_HomeMinute]</value>
+		<value condition="!String.isEqual(Container(301).ListItem.Duration(h),0) + String.IsEqual(Container(301).ListItem.Duration(m),0) + !String.IsEqual(Container(301).ListItem.Duration(ss),0)">$INFO[Container(301).ListItem.Duration(h)] $VAR[Label_HomeHour], $INFO[Container(301).ListItem.Duration(ss)] $LOCALIZE[31296]</value>
+		<value condition="Integer.IsLess(Container(301).ListItem.Duration(mins),1) | String.IsEqual(Container(301).ListItem.Duration(m),0)">$INFO[Container(301).ListItem.Duration(ss),, $LOCALIZE[31296]]</value>
+        <value condition="!String.IsEqual(Container(301).ListItem.Duration(h),0) + String.IsEqual(Container(301).ListItem.Duration(m),0)">$INFO[Container(301).ListItem.Duration(h)] $VAR[Label_HomeHour]</value>
+		<value>$INFO[Container(301).ListItem.Duration(h)] $VAR[Label_HomeHour], $INFO[Container(301).ListItem.Duration(m)] $VAR[Label_HomeMinute]</value>
+	</variable>
+
+    <variable name="Label_Hour">
+        <value condition="Integer.IsEqual(ListItem.Duration(h),1)">$LOCALIZE[31036]</value>
+        <value condition="Integer.IsGreater(ListItem.Duration(h),1)">$LOCALIZE[31035]</value>
+    </variable>
+	
+	<variable name="Label_HomeHour">
+        <value condition="Integer.IsEqual(Container(301).ListItem.Duration(h),1)">$LOCALIZE[31036]</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Duration(h),1)">$LOCALIZE[31035]</value>
+    </variable>
+    
+    <variable name="Label_Minute">
+        <value condition="Integer.IsEqual(ListItem.Duration(m),1)">$LOCALIZE[31295]</value>
+        <value condition="Integer.IsGreater(ListItem.Duration(m),1)">$LOCALIZE[31020]</value>
+    </variable>
+
+    <variable name="Label_HomeMinute">
+        <value condition="Integer.IsEqual(Container(301).ListItem.Duration(m),1)">$LOCALIZE[31295]</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Duration(m),1)">$LOCALIZE[31020]</value>
+    </variable>
+	
     <variable name="Label_NumItems">
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
         <value condition="!String.IsEqual(Container.NumItems,0) + !String.IsEmpty(Container.NumItems) + !Container.IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
@@ -189,7 +229,7 @@
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$INFO[Window(Home).Property(VideoInfo_InfoLine)]</value>
         <value condition="String.IsEqual(ListItem.Label,..)"></value>
         <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Count),, $LOCALIZE[36901]  •  ]$INFO[Window(Home).Property(SkinHelper.ListItem.Year),,  •  ]$VAR[Label_Duration,,  •  ]$VAR[Label_Rating]</value>
-        <value condition="[Container.Content(movies) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration) | !String.IsEmpty(ListItem.Rating)]">$INFO[ListItem.Year,,  •  ]$VAR[Label_Duration,,  •  ]$INFO[ListItem.EndTime,$LOCALIZE[31106] ,  •  ]$VAR[Label_Rating]</value>
+        <value condition="[Container.Content(movies) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration) | !String.IsEmpty(ListItem.Rating)]">$INFO[ListItem.Year,,  •  ]$VAR[Label_Duration,,  •  ]$INFO[ListItem.EndTime,$LOCALIZE[31106] ,  •  ]$VAR[Label_Rating,,  •  ]$INFO[ListItem.MPAA]</value>
         <value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle,,  •  ]$INFO[ListItem.Premiered,,  •  ]$VAR[Label_Duration,,  •  ]$INFO[ListItem.EndTime,$LOCALIZE[31106] ,  •  ]$VAR[Label_Rating]</value>
         <value condition="Container.Content(tvshows) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Property(TotalSeasons),, $LOCALIZE[33054]  •  ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]  •  ]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31215]  •  ]$VAR[Label_Duration,,  •  ]$VAR[Label_Rating]</value>
         <value condition="Container.Content(seasons) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]  •  ]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31215]]$INFO[ListItem.Year,  •  ,]</value>
